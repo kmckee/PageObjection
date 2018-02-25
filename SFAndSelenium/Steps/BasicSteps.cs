@@ -3,7 +3,6 @@ using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 using SFAndSelenium.Pages;
-using System;
 
 namespace SFAndSelenium.Steps
 {
