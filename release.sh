@@ -11,7 +11,7 @@ else
 fi
 
 # Update nuspec with version.
-sed -i 's/<version>.*<\/version>/<version>'$ESCAPED_VERSION'<\/version>/g' nPageObject.nuspec
+sed -i 's/<version>.*<\/version>/<version>'$ESCAPED_VERSION'<\/version>/g' PageObjection.nuspec
 
 # Commit it, tag it, push it.
 git commit -am "Release v"$VERSION
@@ -19,8 +19,8 @@ git tag -a v$VERSION
 git push origin --tags
 
 # Pack it
-nuget pack nPageObject.nuspec
+nuget pack PageObjection.nuspec
 
 # Push it to nuget
-nuget push nPageObject.$!.nupkg -source https://api.nuget.org/v3/index.json
+nuget push PageObjection.$!.nupkg -source https://api.nuget.org/v3/index.json
 
