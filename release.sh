@@ -22,5 +22,5 @@ git push origin --tags
 nuget pack PageObjection/
 
 # Push it to nuget
-nuget push PageObjection/PageObjection.$VERSION.nupkg -source https://api.nuget.org/v3/index.json
+nuget push PageObjection.$VERSION.nupkg -source https://api.nuget.org/v3/index.json
 
