@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>PageObjection</id>
-    <version>1.0.3</version>
+    <version>1.0.5</version>
     <title>$title$</title>
     <authors>Kyle McKee</authors>
     <owners>Kyle McKee</owners>
@@ -15,6 +15,6 @@
     <tags>SpecFlow Cucumber Selenium PageObject PageObjection</tags>
   </metadata>
   <files>
-    <file src="lib\**" target="lib/{framework name}[{version}]" />
+    <file src="bin\Debug\PageObjection.dll" target="lib\net462\PageObjection.dll" />
   </files>
 </package>

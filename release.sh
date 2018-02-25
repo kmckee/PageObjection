@@ -19,8 +19,8 @@ git tag -a v$VERSION -m "Release v"$VERSION
 git push origin --tags
 
 # Pack it
-nuget pack PageObjection
+nuget pack PageObjection/
 
 # Push it to nuget
-nuget push PageObjection.$VERSION.nupkg -source https://api.nuget.org/v3/index.json
+nuget push PageObjection/PageObjection.$VERSION.nupkg -source https://api.nuget.org/v3/index.json
 
