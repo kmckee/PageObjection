@@ -15,7 +15,7 @@ sed -i 's/<version>.*<\/version>/<version>'$ESCAPED_VERSION'<\/version>/g' PageO
 
 # Commit it, tag it, push it.
 git commit -am "Release v"$VERSION
-git tag -a v$VERSION
+git tag -a v$VERSION -m "Release v"$VERSION
 git push origin --tags
 
 # Pack it

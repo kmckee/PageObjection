@@ -14,4 +14,7 @@
     <copyright>Copyright 2018</copyright>
     <tags>SpecFlow Cucumber Selenium PageObject PageObjection</tags>
   </metadata>
+  <files>
+    <file src="lib\**" target="lib/{framework name}[{version}]" />
+  </files>
 </package>
