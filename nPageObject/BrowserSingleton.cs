@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium.Chrome;
-using System;
 
 namespace nPageObject
 {
