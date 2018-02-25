@@ -7,6 +7,6 @@ namespace nPageObject
         public abstract string Url { get; }
         public ChromeDriver Browser { get { return BrowserSingleton.Instance; } }
 
-        public bool IsLoaded {  get { return Browser.Url == this.Url; } }
+        public bool IsLoaded {  get { return Browser.Url == Url; } }
     }
 }
