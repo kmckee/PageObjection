@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
+    <id>PageObjection</id>
     <version>1.0.2</version>
     <title>$title$</title>
     <authors>Kyle McKee</authors>
