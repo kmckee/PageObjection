@@ -11,7 +11,7 @@ else
 fi
 
 # Update nuspec with version.
-sed -i 's/<version>.*<\/version>/<version>'$ESCAPED_VERSION'<\/version>/g' PageObjection.nuspec
+sed -i 's/<version>.*<\/version>/<version>'$ESCAPED_VERSION'<\/version>/g' PageObjection/PageObjection.nuspec
 
 # Commit it, tag it, push it.
 git commit -am "Release v"$VERSION
