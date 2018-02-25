@@ -39,5 +39,10 @@ namespace SFAndSelenium.Pages
         {
             Browser.FindElementByCssSelector("input[type='submit']").Click();
         }
+
+        public bool IsWorking()
+        {
+            return Browser.FindElementByClassName("ajax-loader").Displayed;
+        }
     }
 }

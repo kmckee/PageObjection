@@ -3,6 +3,7 @@ using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 using SFAndSelenium.Pages;
+using System;
 
 namespace SFAndSelenium.Steps
 {
@@ -63,7 +64,7 @@ namespace SFAndSelenium.Steps
                 page.Subject = details["Subject"];
                 page.Message = details["Message"];
                 page.Send();
-                System.Threading.Thread.Sleep(1000);
+                WaitUntil(() => { return page.IsWorking() == false; });
             });
         }
 

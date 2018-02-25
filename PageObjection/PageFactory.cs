@@ -38,5 +38,22 @@ namespace PageObjection
             var instance = new T();
             action(instance);
         }
+
+        private int WaitTimeoutMs = 10000;
+        private int WaitTestInterval = 50;
+        public void WaitUntil(Func<bool> test)
+        {
+            var totalWait = 0;
+            while (totalWait < WaitTimeoutMs)
+            {
+                var result = test();
+                if (result) { break; }
+                System.Threading.Thread.Sleep(WaitTestInterval);
+            }
+            if(test() == false)
+            {
+                throw new OpenQA.Selenium.WebDriverTimeoutException("WaitUntil waited the maximum amount of time, but the condition never passed.");
+            }
+        }
     }
 }
