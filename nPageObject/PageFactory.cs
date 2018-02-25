@@ -6,25 +6,30 @@ namespace nPageObject
 {
     public class PageFactory
     {
-        public static ChromeDriver Browser { get; set; }
-
-        static PageFactory()
+        private ChromeDriver Browser
         {
-            Browser = new ChromeDriver();
+            get { return BrowserSingleton.Instance; }
         }
 
         public T Visit<T>()
-            where T : PageObject
+            where T : PageObject, new()
         {
-            var instance = Activator.CreateInstance(typeof(T), Browser) as T;
+            var instance = new T();
             Browser.Url = instance.Url;
             return instance;
         }
 
         public T On<T>()
-            where T : PageObject
+            where T : PageObject, new()
         {
-            return Activator.CreateInstance(typeof(T), Browser) as T;
+            return new T();
+        }
+
+        public void On<T>(Action<T> action)
+            where T : PageObject, new()
+        {
+            var instance = new T();
+            action(instance);
         }
     }
 }

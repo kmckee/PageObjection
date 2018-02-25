@@ -1,9 +1,20 @@
 ﻿using OpenQA.Selenium.Chrome;
+using System;
 
 namespace nPageObject
 {
     public static class BrowserSingleton
     {
+        private static readonly Destructor Finalise = new Destructor();
+        private sealed class Destructor
+        {
+            ~Destructor()
+            {
+                // One time only destructor.
+                _instance.Close();
+            }
+        }
+
         private static ChromeDriver _instance;
         public static ChromeDriver Instance
         {

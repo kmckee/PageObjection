@@ -10,11 +10,5 @@ namespace SFAndSelenium
         {
             Browser.FindElementByLinkText("Contact Us").Click();
         }
-
-        public string Name
-        {
-            get { return Browser.FindElementByName("your-name").Text; }
-            set { Browser.FindElementByName("your-name").SendKeys(value); }
-        }
     }
 }

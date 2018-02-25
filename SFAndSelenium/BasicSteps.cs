@@ -22,7 +22,7 @@ namespace SFAndSelenium
         [When(@"I enter my name as ""(.*)""")]
         public void WhenIEnterMyNameAs(string name)
         {
-            On<HomePage>().Name = name;
+            On<ContactPage>().Name = name;
         }
 
         [Then(@"I see a contact form")]
@@ -34,7 +34,26 @@ namespace SFAndSelenium
         [Then(@"my name is ""(.*)""")]
         public void ThenMyNameIs(string expected)
         {
-            Assert.That(On<HomePage>().Name, Is.EqualTo(expected));
+            Assert.That(On<ContactPage>().Name, Is.EqualTo(expected));
+        }
+
+        [When(@"I enter my information:")]
+        public void WhenIEnterMyInformation(Table table)
+        {
+            var details = table.Rows[0];
+            On<ContactPage>((page) =>
+            {
+                page.Name = details["Name"];
+                page.Email = details["Email"];
+                page.Subject = details["Subject"];
+                page.Message = details["Message"];
+            });
+        }
+
+        [When(@"I enter my information succinctly:")]
+        public void WhenIEnterMyInformationSuccinctly(Table table)
+        {
+            //On<ContactPage>().PopulatePageWith(table);
         }
 
     }
