@@ -19,8 +19,8 @@ git tag -a v$VERSION
 git push origin --tags
 
 # Pack it
-nuget pack nPageObject
+nuget pack nPageObject.nuspec
 
 # Push it to nuget
-nuget push nPageObject.$!.nupkg
+nuget push nPageObject.$!.nupkg -source https://api.nuget.org/v3/index.json
 
