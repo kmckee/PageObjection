@@ -52,11 +52,33 @@ namespace SFAndSelenium.Steps
             });
         }
 
+        [When(@"I submit the following contact request:")]
+        public void WhenISubmitTheFollowingContactRequest(Table table)
+        {
+            var details = table.Rows[0];
+            Visit<ContactPage>((page) =>
+            {
+                page.Name = details["Name"];
+                page.Email = details["Email"];
+                page.Subject = details["Subject"];
+                page.Message = details["Message"];
+                page.Send();
+                System.Threading.Thread.Sleep(1000);
+            });
+        }
+
+        [Then(@"I see an error: ""(.*)""")]
+        public void ThenISeeAnError(string expectedError)
+        {
+            var actual = On<ContactPage>().ErrorMessage;
+            Assert.True(On<ContactPage>().ErrorMessage.Contains(expectedError));
+        }
+
         [When(@"I enter my information succinctly:")]
         public void WhenIEnterMyInformationSuccinctly(Table table)
         {
             // TODO
-            //On<ContactPage>().PopulatePageWith(table);
+            //On<ContactPage>().PopulatePageWith(table.AsPageObjectionTable());
         }
     }
 }

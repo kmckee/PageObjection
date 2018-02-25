@@ -18,6 +18,14 @@ namespace PageObjection
             return instance;
         }
 
+        public void Visit<T>(Action<T> action)
+            where T : PageObject, new()
+        {
+            var instance = new T();
+            Browser.Url = instance.Url;
+            action(instance);
+        }
+
         public T On<T>()
             where T : PageObject, new()
         {

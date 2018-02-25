@@ -29,5 +29,15 @@ namespace SFAndSelenium.Pages
             get { return Browser.FindElementByName("your-message").GetAttribute("value"); }
             set { Browser.FindElementByName("your-message").SendKeys(value); }
         }
+
+        public string ErrorMessage
+        {
+            get { return Browser.FindElementByClassName("wpcf7-response-output").Text; }
+        }
+
+        public void Send()
+        {
+            Browser.FindElementByCssSelector("input[type='submit']").Click();
+        }
     }
 }

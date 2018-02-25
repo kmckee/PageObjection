@@ -65,10 +65,10 @@ namespace SFAndSelenium
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Contacting someone")]
-        public virtual void ContactingSomeone()
+        [NUnit.Framework.DescriptionAttribute("Navigation and getting/setting form fields")]
+        public virtual void NavigationAndGettingSettingFormFields()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Contacting someone", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigation and getting/setting form fields", ((string[])(null)));
 #line 5
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -86,10 +86,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Steps with multiple lines")]
-        public virtual void StepsWithMultipleLines()
+        [NUnit.Framework.DescriptionAttribute("Ons with multiple lines")]
+        public virtual void OnsWithMultipleLines()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Steps with multiple lines", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ons with multiple lines", ((string[])(null)));
 #line 12
 this.ScenarioSetup(scenarioInfo);
 #line 13
@@ -116,18 +116,12 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Filling out a form with text fields")]
-        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
-        public virtual void FillingOutAFormWithTextFields()
+        [NUnit.Framework.DescriptionAttribute("Visits with multiple lines")]
+        public virtual void VisitsWithMultipleLines()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filling out a form with text fields", new string[] {
-                        "ignore"});
-#line 21
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Visits with multiple lines", ((string[])(null)));
+#line 20
 this.ScenarioSetup(scenarioInfo);
-#line 22
- testRunner.Given("I am browsing for an awful valentine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 23
- testRunner.When("I choose to contact someone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
@@ -139,9 +133,37 @@ this.ScenarioSetup(scenarioInfo);
                         "foo@nowhere.com",
                         "Hello",
                         "World"});
+#line 21
+ testRunner.When("I submit the following contact request:", ((string)(null)), table2, "When ");
 #line 24
- testRunner.And("I enter my information succinctly:", ((string)(null)), table2, "And ");
+ testRunner.Then("I see an error: \"Failed to send your message.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Easier ways to pass tables into forms")]
+        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
+        public virtual void EasierWaysToPassTablesIntoForms()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Easier ways to pass tables into forms", new string[] {
+                        "ignore"});
 #line 27
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "Email",
+                        "Subject",
+                        "Message"});
+            table3.AddRow(new string[] {
+                        "Kyle",
+                        "foo@nowhere.com",
+                        "Hello",
+                        "World"});
+#line 28
+ testRunner.When("I enter my information succinctly:", ((string)(null)), table3, "When ");
+#line 31
  testRunner.Then("my name is \"Kyle\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
