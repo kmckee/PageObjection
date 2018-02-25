@@ -1,6 +1,6 @@
 ﻿using PageObjection;
 
-namespace SFAndSelenium
+namespace SFAndSelenium.Pages
 {
     public class ContactPage : PageObject
     {

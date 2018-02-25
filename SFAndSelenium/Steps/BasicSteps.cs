@@ -2,7 +2,9 @@
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 
-namespace SFAndSelenium
+using SFAndSelenium.Pages;
+
+namespace SFAndSelenium.Steps
 {
     [Binding]
     public class BasicSteps : PageFactory
@@ -53,8 +55,8 @@ namespace SFAndSelenium
         [When(@"I enter my information succinctly:")]
         public void WhenIEnterMyInformationSuccinctly(Table table)
         {
+            // TODO
             //On<ContactPage>().PopulatePageWith(table);
         }
-
     }
 }

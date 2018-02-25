@@ -58,9 +58,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicSteps.cs" />
-    <Compile Include="ContactPage.cs" />
-    <Compile Include="HomePage.cs" />
+    <Compile Include="Steps\BasicSteps.cs" />
+    <Compile Include="Pages\ContactPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BasicFeatures.feature.cs">
       <AutoGen>True</AutoGen>

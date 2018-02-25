@@ -18,8 +18,8 @@ namespace SFAndSelenium
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("SpecFlowFeature1")]
-    public partial class SpecFlowFeature1Feature
+    [NUnit.Framework.DescriptionAttribute("Basic Features")]
+    public partial class BasicFeaturesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,8 +31,8 @@ namespace SFAndSelenium
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SpecFlowFeature1", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Basic Features", "\tIn order to simplify the Selenium API\r\n\tI want elegant syntax for these step def" +
+                    "initions.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -69,17 +69,17 @@ namespace SFAndSelenium
         public virtual void ContactingSomeone()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Contacting someone", ((string[])(null)));
-#line 6
+#line 5
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
  testRunner.Given("I am browsing for an awful valentine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
+#line 7
  testRunner.When("I choose to contact someone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
+#line 8
  testRunner.And("I enter my name as \"Kyle\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
+#line 9
  testRunner.Then("I see a contact form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
+#line 10
  testRunner.And("my name is \"Kyle\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -90,11 +90,11 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void StepsWithMultipleLines()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Steps with multiple lines", ((string[])(null)));
-#line 13
+#line 12
 this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 13
  testRunner.Given("I am browsing for an awful valentine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
+#line 14
  testRunner.When("I choose to contact someone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -107,22 +107,26 @@ this.ScenarioSetup(scenarioInfo);
                         "foo@nowhere.com",
                         "Hello",
                         "World"});
-#line 16
+#line 15
  testRunner.And("I enter my information:", ((string)(null)), table1, "And ");
+#line 18
+ testRunner.Then("my name is \"Kyle\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Filling out a form with text fields")]
+        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
         public virtual void FillingOutAFormWithTextFields()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filling out a form with text fields", ((string[])(null)));
-#line 20
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filling out a form with text fields", new string[] {
+                        "ignore"});
 #line 21
- testRunner.Given("I am browsing for an awful valentine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 22
+ testRunner.Given("I am browsing for an awful valentine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
  testRunner.When("I choose to contact someone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -135,8 +139,10 @@ this.ScenarioSetup(scenarioInfo);
                         "foo@nowhere.com",
                         "Hello",
                         "World"});
-#line 23
+#line 24
  testRunner.And("I enter my information succinctly:", ((string)(null)), table2, "And ");
+#line 27
+ testRunner.Then("my name is \"Kyle\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
