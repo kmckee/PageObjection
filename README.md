@@ -129,7 +129,9 @@ public void WhenISubmitTheFollowingContactRequest(Table table)
         WaitUntil(() => { return page.IsWorking() == false; });
     });
 }
+```
 
+```csharp
 // Page Object:
 public class ContactPage : PageObject
 {
