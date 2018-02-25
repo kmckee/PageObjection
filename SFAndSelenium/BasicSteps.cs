@@ -1,6 +1,5 @@
-﻿using System;
+﻿using nPageObject;
 using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
 namespace SFAndSelenium

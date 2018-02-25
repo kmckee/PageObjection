@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+﻿using nPageObject;
 
 namespace SFAndSelenium
 {
     public class HomePage : PageObject
     {
         public override string Url => "http://awful-valentine.com/";
-        public HomePage(ChromeDriver webDriver) : base(webDriver)
-        { }
 
         public void ContactUs()
         {

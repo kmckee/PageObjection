@@ -1,15 +1,16 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 
-namespace SFAndSelenium
+namespace nPageObject
 {
     public class PageFactory
     {
-        public static IWebDriver Browser { get; set; }
+        public static ChromeDriver Browser { get; set; }
 
         static PageFactory()
         {
-            Browser = new OpenQA.Selenium.Chrome.ChromeDriver();
+            Browser = new ChromeDriver();
         }
 
         public T Visit<T>()
