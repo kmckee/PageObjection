@@ -4,6 +4,8 @@ A few methods to make Cucumber testing with SpecFlow and Selenium easier.
 
 ## Setup
 
+Install the `PageObjection` [Nuget Package](https://www.nuget.org/packages/PageObjection/), along with `TechTalk.SpecFlow` and `NUnit3`.
+
 Make your steps inherit from `PageFactory`:
 ```csharp
 using PageObjection;
