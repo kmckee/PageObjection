@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFAndSelenium", "SFAndSelenium\SFAndSelenium.csproj", "{DD28B124-4DA1-4D47-8D27-B598617A5F78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nPageObject", "nPageObject\nPageObject.csproj", "{89CC08AF-42BD-4C24-B817-BCC72D865554}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjection", "nPageObject\PageObjection.csproj", "{89CC08AF-42BD-4C24-B817-BCC72D865554}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{61176BB4-032B-4092-A00D-F26902E28B0F}"
+	ProjectSection(SolutionItems) = preProject
+		PageObjection.nuspec = PageObjection.nuspec
+		release.sh = release.sh
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

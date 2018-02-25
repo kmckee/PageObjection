@@ -7,8 +7,8 @@
     <ProjectGuid>{89CC08AF-42BD-4C24-B817-BCC72D865554}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>nPageObject</RootNamespace>
-    <AssemblyName>nPageObject</AssemblyName>
+    <RootNamespace>PageObjection</RootNamespace>
+    <AssemblyName>PageObjection</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

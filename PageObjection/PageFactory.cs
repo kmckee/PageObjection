@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium.Chrome;
 using System;
 
-namespace nPageObject
+namespace PageObjection
 {
     public class PageFactory
     {

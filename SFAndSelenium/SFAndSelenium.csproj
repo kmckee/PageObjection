@@ -77,9 +77,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\nPageObject\nPageObject.csproj">
+    <ProjectReference Include="..\nPageObject\PageObjection.csproj">
       <Project>{89cc08af-42bd-4c24-b817-bcc72d865554}</Project>
-      <Name>nPageObject</Name>
+      <Name>PageObjection</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

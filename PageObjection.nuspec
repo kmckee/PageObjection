@@ -6,12 +6,12 @@
     <title>$title$</title>
     <authors>Kyle McKee</authors>
     <owners>Kyle McKee</owners>
-    <licenseUrl>https://github.com/kmckee/nPageObject/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/kmckee/nPageObject</projectUrl>
+    <licenseUrl>https://github.com/kmckee/PageObjection/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/kmckee/PageObjection</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Factory and PageObject support for Selenium use with SpecFlow.</description>
     <releaseNotes>MVP</releaseNotes>
     <copyright>Copyright 2018</copyright>
-    <tags>SpecFlow Cucumber Selenium PageObject</tags>
+    <tags>SpecFlow Cucumber Selenium PageObject PageObjection</tags>
   </metadata>
 </package>

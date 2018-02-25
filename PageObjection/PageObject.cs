@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium.Chrome;
 
-namespace nPageObject
+namespace PageObjection
 {
     public abstract class PageObject
     {

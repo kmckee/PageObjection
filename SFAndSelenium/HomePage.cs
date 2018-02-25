@@ -1,4 +1,4 @@
-﻿using nPageObject;
+﻿using PageObjection;
 
 namespace SFAndSelenium
 {
