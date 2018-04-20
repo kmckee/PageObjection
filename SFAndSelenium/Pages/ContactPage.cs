@@ -37,7 +37,7 @@ namespace SFAndSelenium.Pages
 
         public void Send()
         {
-            Browser.FindElementByCssSelector("input[type='submit']").Click();
+            QuerySelector("input[type='submit']").Click();
         }
 
         public bool IsWorking()
