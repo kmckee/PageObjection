@@ -143,4 +143,17 @@ public class ContactPage : PageObject
 }
 ```
 
+Rather than writing `Browser.FindElementByCssSelector()` you can use the inherited `QuerySelector` and `QuerySelectorAll` methods within your PageObjects:
+
+```csharp
+public class ContactPage : PageObject
+{
+    // ...
+    public bool IsWorking()
+    {
+        return QuerySelector(".ajax-loader").Displayed;
+    }
+}
+```
+
 
